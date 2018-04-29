@@ -16,6 +16,8 @@ def newtonRaphson(exp, x, error):
 	#CALCULO LA DERIVADA
 	df = diff(f)	
 	print ('f\'(x) = '+str(df))
+	
+	#MIENTRAS Fx SEA MAYOR QUE EL ERROR
 	while(abs(f.subs('x',x))>error):
 		xAnt = x
 		
