@@ -7,7 +7,7 @@ from sympy.parsing.mathematica import mathematica
 from sympy.parsing.maxima import parse_maxima
 from sympy import *
 
-#	RECIBE UN FUNCION EN FORMATO STRING, x ES UN VALOR SUPUESTAMENTE CERCANO A LA RAIZ		
+#	RECIBE UNA FUNCIÓN EN FORMATO STRING, x ES UN VALOR SUPUESTAMENTE CERCANO A LA RAIZ		
 def newtonRaphson(exp, x, error):	
 	#PARSEO LA FUNCION
 	f = mathematica(exp)
