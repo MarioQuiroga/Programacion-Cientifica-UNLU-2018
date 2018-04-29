@@ -7,7 +7,7 @@ from sympy.parsing.mathematica import mathematica
 from sympy.parsing.maxima import parse_maxima
 from sympy import *
 
-#	RECIBE UNA FUNCION EN FORMATO STRING, x ES UN VALOR SUPUESTAMENTE CERCANO A LA RAIZ		
+#	RECIBE UNA FUNCION EN FORMATO STRING, 2 PUNTOS DE ARRANQUE Y EL ERROR
 def secante(exp, xAnt, x, error):	
 	#PARSEO LA FUNCION
 	f = mathematica(exp)
