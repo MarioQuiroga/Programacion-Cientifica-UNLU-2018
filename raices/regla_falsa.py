@@ -14,18 +14,29 @@ def regla_falsa(exp, x1, x2, error):
 	print ('f(x) ingresada = '+str(f))
 	
 	print ('X1 = '+str(xAnt)+'     X2 = '+str(x))
-    
+    	
+	# CALCULO EL PUNTO INTERIOR 
+		
+	# PREGUNTO SI MENOR QUE EL ERROR
 	while(abs(f.subs('x',x))>error):
 		xAux = xAnt
 		xAnt = x		
 		
-		#IMPRIMO X y F(X) EN EL PUNTO 
+		# IMPRIMO X y F(X) EN EL PUNTO 
 		print ('f(x) = '+str(float(f.subs('x',xAnt))))
 		print ('x = '+str(float(xAnt)))		
 		
-		# DEFINO LA RECTA 
+		# DEFINO LA RECTA que pasa por los puntos (x1, F(x1)) (x2, F(x2))
 		m = float((f.subs('x',x) - f.subs('x',xAux)) / ( x - xAux))
 		print ('m',m)
+		
+		
+		
+		# SI NO, EVALUO EL PROXIMO INTERVALO
+		
+		# CALCULO EL PUNTO INTERIOR 
+		
+		
 		
 		b = float(f.subs('x',xAux) - (m * xAux))		
 		print ('b', b)
